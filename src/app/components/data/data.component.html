@@ -1,0 +1,25 @@
+<div class="container-fluid dataSection">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <button class="btn btn-primary" type="submit" (click)="onSubmit()">
+        Submit</button
+      ><br /><br />
+      <table style="width:100%">
+        <tr>
+          <th>Id</th>
+          <th>name</th>
+          <th>username</th>
+          <th>email</th>
+          <th>address</th>
+        </tr>
+        <tr *ngFor="let user of userdata">
+          <td>{{ user.id }}</td>
+          <td>{{ user.name }}</td>
+          <td>{{ user.username }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.address | json }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

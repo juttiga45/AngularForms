@@ -1,0 +1,22 @@
+<div class="container-fluid topSection">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <h4>pipes</h4>
+      <p>date pipe</p>
+      <p>birthday is {{ birthday | date }}</p>
+      <p>{{ birthday | date: "MM/dd/yy" }}</p>
+      <p>uppercase pipe</p>
+      <p>{{ birthday | date | uppercase }}</p>
+      <p>{{ birthday | date: "fullDate" | uppercase }}</p>
+
+      <span>today date is</span> {{ today }}
+
+      <p>today date in shortform {{ today | date: "d/M/y" }}</p>
+      <p>{{ today | date: "shortTime" }}</p>
+      <p>percent pipe</p>
+      <p>{{ 00.54565 | percent }}</p>
+      <h2>custom pipe</h2>
+      <p>square root of 25 is {{ 25 | sqrt }}</p>
+    </div>
+  </div>
+</div>

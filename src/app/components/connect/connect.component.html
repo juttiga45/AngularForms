@@ -1,0 +1,59 @@
+<div class="container-fluid topSection">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <p>Reactive froms</p>
+      <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+        <div id="user-data">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input
+              type="text"
+              id="username"
+              formControlName="username"
+              class="form-control"
+              ngModel
+              name="username"
+              required
+            />
+            <span
+              *ngIf="
+                !signupForm.get('username').valid &&
+                signupForm.get('username').touched
+              "
+              class="help-block "
+            >
+              Please enter a valid username
+            </span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">email</label>
+            <input
+              type="email"
+              id="email"
+              formControlName="email"
+              class="form-control"
+              ngModel
+              name="email"
+              required
+              email
+            />
+            <span
+              *ngIf="
+                !signupForm.get('email').valid &&
+                signupForm.get('email').touched
+              "
+              class="help-block "
+            >
+              Please enter a valid email
+            </span>
+          </div>
+
+          <button class="btn btn-primary" type="submit">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
